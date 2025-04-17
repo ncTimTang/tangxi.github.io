@@ -1,2 +1,1 @@
-# tangxi.github.io-main
-personal homepage of tangxi
+[RESUME](https://nctimtang.github.io/tangxi.github.io-main/)
