@@ -1,1 +1,1 @@
-[RESUME](https://nctimtang.github.io/tangxi.github.io-main/)
+[RESUME](https://nctimtang.github.io/tangxi.github.io/)
