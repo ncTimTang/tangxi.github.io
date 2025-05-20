@@ -97,6 +97,10 @@ function init_apps() {
             icon: '<svg viewBox="-10 -10 70 70" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#262f73" stroke-width="2"><g><circle cx="13.8096" cy="29.9036" r="9.3075"></circle><circle cx="26.4413" cy="17.3207" r="8.5318"></circle><path d="M21.14,35.6386,32.3015,23.5225c3.2871-3.5684,12.4462-1.4954,12.4462,5.8623,0,9.8263-8.6916,13.0451-15.0182,4.7468"></path><path d="M25.132,13.3652c-2.0545,1.2363-3.8009,2.7125-2.62,6.6747"></path><circle cx="13.8096" cy="29.9036" r="9.3075"></circle><circle cx="26.4413" cy="17.3207" r="8.5318"></circle><path d="M21.14,35.6386,32.3015,23.5225c3.2871-3.5684,12.4462-1.4954,12.4462,5.8623,0,9.8263-8.6916,13.0451-15.0182,4.7468"></path><path d="M25.132,13.3652c-2.0545,1.2363-3.8009,2.7125-2.62,6.6747"></path></g></svg>',
             link: "https://localhost:7001",
         },
+        AboutMe: {
+            icon: '<svg viewBox="-50 -50 425 400" xmlns="http://www.w3.org/2000/svg"><g><rect rx="20" height="240" width="80" y="75" x="25" stroke="#e32a77" fill="#e32a77"/><rect rx="20" height="240" width="80" y="75" x="270" stroke="#bc22df" fill="#bc22df"/><rect transform="rotate(-45 130 145)" rx="20" height="240" width="80" y="25" x="90" stroke="#34e3bb" fill="#34e3bb"/><rect transform="rotate(45 243.5 145)" rx="20" height="240" width="87" y="25" x="200" stroke="#fbdb04" fill="#fbdb04"/></g></svg>',
+            link: "https://github.com/MzeroMiko",
+        }
     }];
     
     const apps = ["monitor_app", "explorer_app", "music_app", "video_app", "pdf_reader_app"];
