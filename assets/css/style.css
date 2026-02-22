@@ -6,7 +6,7 @@
   --card: #ffffff;
   --glass: rgba(16,24,40,0.04);
   --radius: 12px;
-  --measure: 720px;
+  --measure: 90%;
   --sidebar-width: 240px;
   --header-height: 64px;
 }
@@ -22,6 +22,10 @@ body.dark{
 
 *{
     box-sizing:border-box
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
@@ -127,11 +131,31 @@ body{
 
 .sidebar .link-item .fa-linkedin { color: #0077b5; }
 
-.sidebar .link-item .fa-github { color: #1f2328; }
+.sidebar .link-item .fa-github { color: #666666; }
 
 .sidebar .link-item .fa-graduation-cap { color: #4285f4; }
 
 .sidebar .link-item .fa-orcid { color: #a6ce39; }
+
+.sidebar .banner {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #0008;
+    display: none;
+}
+
+.sidebar .banner-item {
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    display: none;
+}
 
 @media (max-width:900px){
     .sidebar{
@@ -184,7 +208,6 @@ body{
         display: none;
     }
 }
-
 
 /* siteheader =========================== */
 .siteheader{
@@ -243,29 +266,6 @@ body{
     }
 }
 
-/* banner =========================== */
-.banner {
-    position: fixed;
-    margin: auto;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: #0008;
-    display: none;
-}
-
-.banner .banner-item {
-    top: 50%;
-    left: 50%;
-    position: relative;
-    transform: translate(-50%, -50%);
-    display: none;
-}
-
-
-
 /* main =========================== */
 .main {
     min-height: 600px;
@@ -274,12 +274,32 @@ body{
     padding-top:calc(var(--header-height) + 20px);
 }
 
+.main .section {
+    scroll-margin-top: var(--header-height);
+}
+
 .main .container{
     max-width:var(--measure);
     margin:0 auto;
     padding:28px
 }
 
+.main .section h2{
+    margin-top:0;
+    font-family: 'Noto Serif SC', Georgia, "Times New Roman", serif;
+    font-weight:700;
+    font-size:1.6rem;
+    color:var(--text);
+    margin-bottom:8px;
+}
+
+.main .section p{
+    color:var(--muted);
+}
+
+.main .section a{
+    color: #0084fd;
+}
 
 @media (max-width:900px){
     .main{
@@ -288,42 +308,26 @@ body{
     }
 }
 
-.hero{
-    padding:32px 0 48px
-}
-.hero-inner{
+/* main.profile =========================== */
+.main .profile{
     display:flex;
     gap:32px;
-    align-items:center
+    align-items:center;
 }
-.hero-left{
+
+.main .profile .info{
     flex:1
 }
-.hero-right{
-    width:260px
-}
-.lead{
-    color:var(--muted);
-    font-size:1.05rem;
-}
-.accent{
+
+.main .profile .info .n1{
     color:var(--accent);
 }
-.btn{
-    display:inline-block;
-    background:var(--accent);
-    color:white;
-    padding:10px 16px;
-    border-radius:10px;
-    text-decoration:none;
-    border:0;
-}
-.btn-secondary{
-    background:transparent;
-    border:1px solid var(--glass);
+
+.main .profile .info .n2{
     color:var(--text);
 }
-.profile-card{
+
+.main .profile .photo{
     background:var(--card);
     padding:18px;
     border-radius:14px;
@@ -331,123 +335,78 @@ body{
     flex-direction:column;
     align-items:center;
     gap:12px;
-}
-.profile-photo{
-    width:140px;
-    height:140px;
-    border-radius:10px;
-    object-fit:cover;
-}
-.profile-meta{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    width:260px;
 }
 
-.section{
-    padding:48px 0;
+@media (max-width:500px){
+    .main .profile{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .main .profile .photo{
+        width:100%;
+    }
 }
-.section h2{
-    margin-top:0;
-    font-family: 'Noto Serif SC', Georgia, "Times New Roman", serif;
-    font-weight:700;
-    font-size:1.6rem;
-    color:var(--text);
-    margin-bottom:8px;
-}
-.section p{
-    font-size:1.02rem;
-    color:var(--text);
-}
-.muted{
-    color:var(--muted);
-}
-.cards{
+
+/* main.cards =========================== */
+.main .cards{
     display:flex;
     gap:18px;
     margin-top:18px;
     flex-wrap:wrap;
 }
-.card{
+
+.main .card{
     background:var(--card);
     padding:18px;
     border-radius:12px;
     box-shadow:0 6px 18px rgba(12,14,20,0.03);
 }
-.card.small{
-    flex:1;
-    min-width:200px;
+
+.main .card.small{
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-    margin-top:18px;
-}
-.project{
-    padding:18px;
-    border-radius:8px;
-    background:transparent;
-    border:1px solid var(--glass);
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-.project h3{
-    font-family:'Noto Serif SC', Georgia, serif;
-    margin:0;
-}
-.project .tags{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-}
-.tag{
-    font-size:12px;
-    padding:6px 8px;
-    border-radius:999px;
-    background:var(--glass);
-    color:var(--muted);
+.main .card.small .icon-card{
+    flex-shrink: 0;
+    width: 36%;
+    height: 100%;
+    padding-right: 0.5em;
 }
 
-blockquote{
-    border-left:4px solid var(--glass);
-    padding-left:18px;
-    color:var(--muted);
-    font-style:italic;
-    margin:20px 0;
-}
-code{
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Noto Sans Mono', monospace;
-    background:rgba(0,0,0,0.03);
-    padding:0.15em 0.4em;
-    border-radius:6px;
-}
-pre{
-    background:var(--card);
-    padding:14px;
-    border-radius:8px;
-    overflow:auto;
+.main .card.small .icon{
+    max-width: 100%;
+    max-height: 100%;
 }
 
-
-
-@media (max-width:900px){
-    .hero-inner{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-    .hero-right{
-        width:100%;
-    }
-    .grid{
-        grid-template-columns:1fr;
-    }
+.main .card.small .title{
+    display: block;
+    font-weight: 600;
+    color: var(--text);
+    margin: 2px;
 }
-@media (max-width:560px){
-    .grid{
-        grid-template-columns:1fr;
-    }
+
+.main .card.small .author{
+    display: block;
+    color: var(--muted);
+    margin: 2px;
+    font-size: 0.8em;
+}
+
+.main .card.small .pub{
+    display: block;
+    color: var(--muted);
+    margin: 2px;
+    font-size: 0.8em;
+}
+
+.main .card.small .link{
+    display: block;
+    color: var(--muted);
+    margin: 2px;
+    font-size: 0.8em;
 }
 

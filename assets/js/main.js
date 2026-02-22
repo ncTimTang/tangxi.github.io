@@ -1,22 +1,42 @@
-(function(){
-    const root = document.documentElement;
-    const body = document.body;
+function setup_theme() {
+    const htmlstore = document.body.querySelector("htmlstore");
     const saved = localStorage.getItem('theme');
-    if(saved === 'dark') body.classList.add('dark');
-    const theme_btns = body.querySelectorAll('.btn-theme')
+    if(saved === 'dark') document.body.classList.add('dark');
+    const theme_btns = document.body.querySelectorAll('.btn-theme');
+
+    const icons = htmlstore.querySelector(".icons");
+    const icon_sun = icons.querySelector(".icon_sun").innerHTML;
+    const icon_moon = icons.querySelector(".icon_moon").innerHTML;
 
     function toggle_theme(ele) {
-        const isDark = body.classList.toggle('dark');
+        const isDark = document.body.classList.toggle('dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        ele.innerHTML = isDark ? '<svg class="h-4 w-4" data-testid="geist-icon" fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2"></path><path d="M12 21v2"></path><path d="M4.22 4.22l1.42 1.42"></path><path d="M18.36 18.36l1.42 1.42"></path><path d="M1 12h2"></path><path d="M21 12h2"></path><path d="M4.22 19.78l1.42-1.42"></path><path d="M18.36 5.64l1.42-1.42"></path></svg>' : '<svg class="h-4 w-4" data-testid="geist-icon" fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>';
+        ele.innerHTML = isDark ? icon_sun : icon_moon;
     }
 
     for (let ele of theme_btns) {
+        let isDark = (saved === 'dark');
+        ele.innerHTML = isDark ? icon_sun : icon_moon;
         ele.addEventListener('click', ()=>{toggle_theme(ele)});
     }
+}
 
+function setup_sidebar() {
+    const sidebar = document.body.querySelector(".sidebar");
+    sidebar.querySelector(".name").innerHTML = CONFIG["name"];
+    sidebar.querySelector(".bio").innerHTML = CONFIG["bio"];
+    sidebar.querySelector(".location span").innerHTML = CONFIG["contact"]["location"];
 
-    const banner = body.querySelector('.banner');
+    sidebar.querySelector(".mailto").href = CONFIG["contact"]["mail"];
+    sidebar.querySelector(".github").href = CONFIG["contact"]["github"];
+    sidebar.querySelector(".huggingface").href = CONFIG["contact"]["huggingface"];
+    sidebar.querySelector(".google").href = CONFIG["contact"]["google"];
+    sidebar.querySelector(".orcid").href = CONFIG["contact"]["orcid"];
+
+    sidebar.querySelector(".avatar").src = CONFIG["avatar"]["avatar"];
+    sidebar.querySelector(".banner .wechat img").src = CONFIG["contact"]["wechat"];
+
+    const banner = sidebar.querySelector('.banner');
     banner.addEventListener('click', () => {
         for (let ele of banner.querySelectorAll(".banner-item")) {
             ele.style.display = 'none';
@@ -24,12 +44,51 @@
         banner.style.display = 'none';
     })
 
-    const btn_wechat = body.querySelector(".links-list .wechat");
+    const btn_wechat = sidebar.querySelector(".links-list .wechat");
     btn_wechat.addEventListener('click', (e)=> {
         banner.querySelector(".wechat").style.display = 'inline-block';
         banner.style.display = 'unset';
         e.preventDefault();
     })
+}
 
+function setup_aboutme() {
+    const htmlstore = document.body.querySelector("htmlstore");
+    const profile = document.body.querySelector(".main .section .profile");
+    profile.querySelector(".info .n1").innerHTML = CONFIG["given_name"];
+    profile.querySelector(".info .n2").innerHTML = CONFIG["family_name"];
+    profile.querySelector(".info .detail").innerHTML = CONFIG["aboutme"];
+    profile.querySelector(".photo .avatar").src = CONFIG["avatar"]["photo"];
+    profile.querySelector(".photo .avatar").width = CONFIG["avatar"]["photo_width"];
+    profile.querySelector(".photo .avatar").height = CONFIG["avatar"]["photo_height"];
+}
 
-})();
+function setup_news() {
+    const htmlstore = document.body.querySelector("htmlstore");
+}
+
+function setup_pubs() {
+    const htmlstore = document.body.querySelector("htmlstore");
+    const publication_template = htmlstore.querySelector(".publications").innerHTML;
+    const publications = document.body.querySelector(".main .section .publications .cards");
+    function build_pub(data) {
+        ele = document.createElement("div");
+        ele.innerHTML = publication_template;
+        ele.querySelector(".icon").src = data["icon"];
+        ele.querySelector(".detail .title").innerHTML = data["title"];
+        ele.querySelector(".detail .author").innerHTML = data["author"];
+        ele.querySelector(".detail .pub").innerHTML = data["pub"];
+        ele.querySelector(".detail .link").innerHTML = data["link"];
+        return ele.innerHTML;
+    }
+    publications.innerHTML = CONFIG["publications"].map(build_pub).join('');
+}
+
+function main() {
+    setup_theme();
+    setup_sidebar();
+    setup_aboutme();
+    setup_news();
+    setup_pubs();
+}
+
