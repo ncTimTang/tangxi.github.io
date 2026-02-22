@@ -3,7 +3,7 @@
     const body = document.body;
     const saved = localStorage.getItem('theme');
     if(saved === 'dark') body.classList.add('dark');
-    const theme_btns = document.getElementsByClassName('btn-theme')
+    const theme_btns = body.querySelectorAll('.btn-theme')
 
     function toggle_theme(ele) {
         const isDark = body.classList.toggle('dark');
@@ -14,4 +14,22 @@
     for (let ele of theme_btns) {
         ele.addEventListener('click', ()=>{toggle_theme(ele)});
     }
+
+
+    const banner = body.querySelector('.banner');
+    banner.addEventListener('click', () => {
+        for (let ele of banner.querySelectorAll(".banner-item")) {
+            ele.style.display = 'none';
+        }
+        banner.style.display = 'none';
+    })
+
+    const btn_wechat = body.querySelector(".links-list .wechat");
+    btn_wechat.addEventListener('click', (e)=> {
+        banner.querySelector(".wechat").style.display = 'inline-block';
+        banner.style.display = 'unset';
+        e.preventDefault();
+    })
+
+
 })();
