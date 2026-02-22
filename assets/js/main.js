@@ -84,11 +84,20 @@ function setup_pubs() {
     publications.innerHTML = CONFIG["publications"].map(build_pub).join('');
 }
 
+function setup_footer(){
+    const year = document.body.querySelector('.footer .year');
+    const now = new Date();
+    year.innerText = now.getFullYear();
+}
+
 function main() {
     setup_theme();
     setup_sidebar();
     setup_aboutme();
     setup_news();
     setup_pubs();
+    setup_footer();
 }
+
+
 
