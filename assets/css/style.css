@@ -37,12 +37,7 @@ body{
     height:100%;
 }
 
-.container{
-    max-width:var(--measure);
-    margin:0 auto;
-    padding:28px
-}
-
+/* btn-theme =============================== */
 .btn-theme{
     background:transparent;
     border:0;
@@ -82,7 +77,6 @@ body{
 .sidebar .name {
     font-size: 20px;
     font-weight: 700;
-    color: var(--muted);
     margin: 20px 10px 0;
     align-items: center;
 }
@@ -125,10 +119,19 @@ body{
 
 .sidebar .btn-theme {display: none;}
 
-.sidebar .fa-linkedin { color: #0077b5; }
-.sidebar .fa-github { color: #333; }
-.sidebar .fa-google { color: #4285f4; }
+.sidebar .link-item .fa-location-dot { color: #0084fd; }
 
+.sidebar .link-item .fa-envelope { color: #fdd90f; }
+
+.sidebar .link-item .fa-weixin { color: #04d86a; }
+
+.sidebar .link-item .fa-linkedin { color: #0077b5; }
+
+.sidebar .link-item .fa-github { color: #1f2328; }
+
+.sidebar .link-item .fa-graduation-cap { color: #4285f4; }
+
+.sidebar .link-item .fa-orcid { color: #a6ce39; }
 
 @media (max-width:900px){
     .sidebar{
@@ -264,15 +267,22 @@ body{
 
 
 /* main =========================== */
-main {
+.main {
     min-height: 600px;
     background: var(--bg);
     margin-left:var(--sidebar-width);
     padding-top:calc(var(--header-height) + 20px);
 }
 
+.main .container{
+    max-width:var(--measure);
+    margin:0 auto;
+    padding:28px
+}
+
+
 @media (max-width:900px){
-    main{
+    .main{
         margin-left:0;
         padding-top:calc(var(--header-height) + 12px)
     }
