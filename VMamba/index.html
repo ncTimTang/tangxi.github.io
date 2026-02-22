@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Balancing Understanding and Generation in Discrete Diffusion Models">
+    <meta name="description" content="VMamba: Visual State Space Model">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon"
         href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgMCAwIDQwMCA0MDAiPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTM1NyAxMjRsLTMgNi00MiA0My00MiA0MnYxMDVjMiA4IDggMTMgMTUgMTVoNThjNy0zIDEzLTggMTQtMTZWMTI0IiBmaWxsPSIjYmMyMmYzIi8+PHBhdGggZD0iTTQxIDIxOWwxIDk5YzEgOCA3IDE1IDE1IDE3aDU3YzctMSAxMi03IDE0LTE0bDEtMlYyMTVsLTQyLTQyYy00NS00NS00My00My00NC00N2EyMyAyMyAwIDAgMS0xLTNjLTEtMS0xIDEtMSA5Nm0yNzEtNDZsLTQyIDQyIDQyLTQyIiBmaWxsPSIjZTMyYTc3Ii8+PHBhdGggZD0iTTkzIDY1Yy0yIDAtNSAxLTcgM2wtNDEgMzljLTMgNC00IDExLTMgMTV2MmwzIDYgMTA0IDEwNGMtNS02LTUtMTQgMC0yMWwyNi0yNiAyNS0yNi00NS00NC00Ny00N2MtNC00LTEwLTYtMTUtNSIgZmlsbD0iIzM0ZTNiYiIvPjxwYXRoIGQ9Ik0zMDEgNjVsLTggMy0xNDQgMTQ1Yy01IDctNCAxNSAwIDIxIDEgMyAzNyAzOCAzOSA0MCA4IDUgMTcgNCAyNC0xbDE0My0xNDRjNC02IDQtMTQtMS0yMWwtNDEtNDBjLTMtMy04LTQtMTItMyIgZmlsbD0iI2ZiZGIwNCIvPjxwYXRoIGQ9Ik0xNDUgMjIzbDEgMWExMyAxMyAwIDAgMCAwLTFoLTEiIGZpbGw9IiM2YzljOWMiLz48L2c+PC9zdmc+">
 
-    <title>Balancing Understanding and Generation in Discrete Diffusion Models</title>
+    <title>VMamba: Visual State Space Model</title>
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -70,18 +70,26 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">Balancing Understanding and Generation in Discrete Diffusion Models</h1>
-              <!-- <h2 class="is-size-2">xxx</h2> -->
-
+              <h1 class="title is-1 publication-title">VMamba: Visual State Space Model</h1>
+              <h2 class="is-size-3">NeurIPS 2024 Spotlight</h2>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
                   <a href="https://scholar.google.com/citations?user=94Bfnw8AAAAJ">Yue Liu</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=DooPOjIAAAAJ">Yunjie Tian</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
                   <a href="https://scholar.google.com/citations?user=tStQNm4AAAAJ">Yuzhong Zhao</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=nQjItwsAAAAJ">Zheyong Xie</a><sup>2</sup>,
+                  <a href="https://scholar.google.com/citations?user=J80W2-QAAAAJ">Hongtian Yu</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=EEMm7hwAAAAJ">Lingxi Xie</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=o_DllmIAAAAJ">Yaowei Wang</a><sup>3</sup>,
                 </span>
                 <span class="author-block">
                   <a href="https://scholar.google.com/citations?user=tjEfgsEAAAAJ">Qixiang Ye</a><sup>1</sup>,
@@ -91,40 +99,36 @@
                   <a href="https://scholar.google.com/citations?user=XqdpqNcAAAAJ">Jianbin Jiao</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="#">Yao Hu</a><sup>2</sup>,
-                </span>
-                <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=ZF0ntl4AAAAJ">Shaosheng Cao</a><sup>2,*</sup>,
-                </span>
-                <span class="author-block">
                   <a href="https://scholar.google.com/citations?&user=YPL33G0AAAAJ">Yunfan Liu</a><sup>1,*</sup>
                 </span>
               </div>
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block"><sup>1</sup>University of Chinese Academy of Sciences, UCAS</span><br>
-                <span class="author-block"><sup>2</sup>Xiaohongshu Inc.</span><br>
+                <span class="author-block"><sup>2</sup>Huawei Inc.</span><br>
+                <span class="author-block"><sup>3</sup>PCL.</span><br>
               </div>
 
               <div align="center">
                 <small>* Corresponding Author</small>
               </div>
 
-              <!-- <div class="column has-text-centered">
+              <!-- Conference link -->
+              <div class="column has-text-centered">
                 <div class="publication-links">
                   <span class="link-block">
-                    <a href="https://arxiv.org/abs/" target="_blank"
+                    <a href="https://neurips.cc/virtual/2024/poster/94617" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>Paper (Coming)</span>
+                    <span>Poster</span>
                   </a>
-                </span> -->
+                </span>
 
               <!-- Github link -->
               <span class="link-block">
-                <a href="https://github.com/MzeroMiko/XDLM" target="_blank"
+                <a href="https://github.com/MzeroMiko/VMamba" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fab fa-github"></i>
@@ -134,19 +138,19 @@
               </span>
 
               <!-- ArXiv abstract Link -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2602.01362" target="_blank"
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2401.10166" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
 
               <!-- HuggingFace Link -->
               <span class="link-block">
-                <a href="https://huggingface.co/collections/Mzero17/xdlm" target="_blank"
+                <a href="https://huggingface.co/papers/2401.10166" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     🤗
@@ -228,12 +232,11 @@
       </div>
     </section> -->
 
-    <section class="section">
+    <!-- <section class="section">
         <div class="container is-max-desktop">
           <div class="columns is-centered has-text-centered">
             <div class="column is-12">
               <h2 class="title is-3">Abstract</h2>
-              <!-- <img src="./static/images/teaser.png" alt="Project Teaser" style="width: 100%; height: auto; margin-bottom: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"> -->
               <div class="content has-text-justified">
                 <p>
                   In discrete generative modeling, two dominant paradigms demonstrate divergent capabilities: Masked Diffusion Language Models (MDLM) excel at semantic understanding and zero-shot generalization, whereas Uniform-noise Diffusion Language Models (UDLM) achieve strong few step generation quality, yet neither attains balanced performance across both dimensions. To address this, we propose XDLM, which bridges the two paradigms via a stationary noise kernel. XDLM offers two key contributions: (1) it provides a principled theoretical unification of MDLM and UDLM, recovering each paradigm as a special case; and (2) an alleviated memory bottleneck enabled by an algebraic simplification of the posterior probabilities. Experiments demonstrate that XDLM advances the Pareto frontier between understanding capability and generation quality. Quantitatively, XDLM surpasses UDLM by 5.4 points on zero-shot text benchmarks and outperforms MDLM in few-step image generation (FID 54.1 vs. 80.8). When scaled to tune an 8B-parameter large language model, XDLM achieves 15.0 MBPP in just 32 steps, effectively doubling the baseline performance. Finally, analysis of training dynamics reveals XDLM’s superior potential for long-term scaling.
@@ -242,9 +245,10 @@
             </div>
           </div>
         </div>
-    </section>
+    </section> -->
+              <!-- <img src="./static/images/teaser.png" alt="Project Teaser" style="width: 100%; height: auto; margin-bottom: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"> -->
 
-    <section class="section">
+    <!-- <section class="section">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-12">
@@ -261,9 +265,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="section">
+    <!-- <section class="section">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-12">
@@ -292,17 +296,17 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">Citation</h2>
         <p>If you find our work useful or interesting, please consider citing our paper:</p>
-        <pre><code>@article{liu2026balancing,
-title={Balancing Understanding and Generation in Discrete Diffusion Models},
-author={Liu, Yue and Zhao, Yuzhong and Xie, Zheyong and Ye, Qixiang and Jiao, Jianbin and Hu, Yao and Cao, Shaosheng and Liu, Yunfan},
-journal={arXiv preprint arXiv:2602.01362},
-year={2026}
+        <pre><code>@article{liu2024vmamba,
+  title={VMamba: Visual State Space Model},
+  author={Liu, Yue and Tian, Yunjie and Zhao, Yuzhong and Yu, Hongtian and Xie, Lingxi and Wang, Yaowei and Ye, Qixiang and Liu, Yunfan},
+  journal={arXiv preprint arXiv:2401.10166},
+  year={2024}
 }
         </code></pre>
       </div>
