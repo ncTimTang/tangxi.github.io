@@ -63,14 +63,11 @@ function setup_aboutme() {
     profile.querySelector(".photo .avatar").height = CONFIG["avatar"]["photo_height"];
 }
 
-function setup_news() {
-    const htmlstore = document.body.querySelector("htmlstore");
-}
-
-function setup_pubs() {
+function setup_pubs(name, item_list) {
+    if (item_list === undefined) return
     const htmlstore = document.body.querySelector("htmlstore");
     const publication_template = htmlstore.querySelector(".publications").innerHTML;
-    const publications = document.body.querySelector(".main .section .publications .cards");
+    const publications = document.body.querySelector(".main .section " + name + " .cards");
     function build_pub(data) {
         ele = document.createElement("div");
         ele.innerHTML = publication_template;
@@ -81,7 +78,7 @@ function setup_pubs() {
         ele.querySelector(".detail .link").innerHTML = data["link"];
         return ele.innerHTML;
     }
-    publications.innerHTML = CONFIG["publications"].map(build_pub).join('');
+    publications.innerHTML = item_list.map(build_pub).join('');
 }
 
 function setup_footer(){
@@ -94,8 +91,9 @@ function main() {
     setup_theme();
     setup_sidebar();
     setup_aboutme();
-    setup_news();
-    setup_pubs();
+    setup_pubs(".news", CONFIG["news"]);
+    setup_pubs(".publications", CONFIG["publications"]);
+    setup_pubs(".projects", CONFIG["projects"]);
     setup_footer();
 }
 
