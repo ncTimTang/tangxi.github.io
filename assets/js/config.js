@@ -19,8 +19,10 @@ const CONFIG = {
         'orcid': 'https://orcid.org/0000-0001-5880-4923',
         'wechat': 'assets/data/wechat.jpg',
     },
-    'news': [
-    ],
+    // 'news': [
+    // ],
+    // 'experiences': [
+    // ],
     'publications': [
         {
             "icon": "assets/data/pubs/xdlm.png",
@@ -106,7 +108,7 @@ const CONFIG = {
         //     "link": '',
         // },
     ],
-    'projects': [
-    ],
+    // 'projects': [
+    // ],
 }
 

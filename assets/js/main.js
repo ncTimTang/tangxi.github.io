@@ -63,11 +63,11 @@ function setup_aboutme() {
     profile.querySelector(".photo .avatar").height = CONFIG["avatar"]["photo_height"];
 }
 
-function setup_pubs(name, item_list) {
+function setup_secs(name, item_list) {
     if (item_list === undefined) return
     const htmlstore = document.body.querySelector("htmlstore");
     const publication_template = htmlstore.querySelector(".publications").innerHTML;
-    const publications = document.body.querySelector(".main .section " + name + " .cards");
+    const publications = document.body.querySelector(".main " + name + " .cards");
     function build_pub(data) {
         ele = document.createElement("div");
         ele.innerHTML = publication_template;
@@ -91,9 +91,34 @@ function main() {
     setup_theme();
     setup_sidebar();
     setup_aboutme();
-    setup_pubs(".news", CONFIG["news"]);
-    setup_pubs(".publications", CONFIG["publications"]);
-    setup_pubs(".projects", CONFIG["projects"]);
+    
+    if ("news" in CONFIG) {
+        setup_secs("#sec_news .container", CONFIG["news"]);
+    } else {
+        document.body.querySelector(".nav_news").style.display = "none";
+        document.body.querySelector("#sec_news").style.display = "none";
+    }
+
+    if ("experiences" in CONFIG) {
+        setup_secs("#sec_experience .container", CONFIG["experiences"]);
+    } else {
+        document.body.querySelector(".nav_experience").style.display = "none";
+        document.body.querySelector("#sec_experience").style.display = "none";
+    }
+
+    if ("publications" in CONFIG) {
+        setup_secs("#sec_publication .container", CONFIG["publications"]);
+    } else {
+        document.body.querySelector(".nav_publication").style.display = "none";
+        document.body.querySelector("#sec_publication").style.display = "none";
+    }
+
+    if ("projects" in CONFIG) {
+        setup_secs("#sec_project .container", CONFIG["projects"]);
+    } else {
+        document.body.querySelector(".nav_project").style.display = "none";
+        document.body.querySelector("#sec_project").style.display = "none";
+    }
     setup_footer();
 }
 
