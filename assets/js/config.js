@@ -31,8 +31,11 @@ const CONFIG = {
             "pub": "Arxiv 2026",
             "link": `
                 <a target="_blank" href="https://arxiv.org/pdf/2602.01362"><img src="https://img.shields.io/badge/XDLM-arxiv-red?logo=arxiv"></a>
+                <a target="_blank" href="https://mzeromiko.github.io/public/XDLM"><img src="https://img.shields.io/badge/XDLM-page-blue?logo=github"></a>
                 <a target="_blank" href="https://github.com/MzeroMiko/XDLM"><img src="https://img.shields.io/badge/XDLM-repo-blue?logo=github"></a>
-                <a target="_blank" href="https://huggingface.co/papers/2602.01362"><img src="https://img.shields.io/badge/XDLM-huggingface-yellow?logo=huggingface"></a>
+                <a target="_blank" href="https://github.com/MzeroMiko/LLaDA-XDLM"><img src="https://img.shields.io/badge/LLada_XDLM-repo-blue?logo=github"></a>
+                <a target="_blank" href="https://huggingface.co/papers/2602.01362"><img src="https://img.shields.io/badge/XDLM-paper-yellow?logo=huggingface"></a>
+                <a target="_blank" href="https://huggingface.co/collections/Mzero17/xdlm"><img src="https://img.shields.io/badge/XDLM-models-yellow?logo=huggingface"></a>
             `,
         },
         {
@@ -59,7 +62,7 @@ const CONFIG = {
             "link": `
                 <a target="_blank" href="https://arxiv.org/pdf/2507.20673"><img src="https://img.shields.io/badge/GMPO-arxiv-red?logo=arxiv"></a>
                 <a target="_blank" href="https://github.com/callsys/GMPO"><img src="https://img.shields.io/badge/GMPO-repo-blue?logo=github"></a>
-                <a target="_blank" href="https://huggingface.co/papers/2507.20673"><img src="https://img.shields.io/badge/GMPO-huggingface-yellow?logo=huggingface"></a>
+                <a target="_blank" href="https://huggingface.co/papers/2507.20673"><img src="https://img.shields.io/badge/GMPO-paper-yellow?logo=huggingface"></a>
             `,
         },
         {
@@ -96,8 +99,8 @@ const CONFIG = {
                 <a target="_blank" href="https://neurips.cc/virtual/2024/poster/94617"><img src="https://img.shields.io/badge/VMamba-poster-c580fa?logo=arxiv"></a>
                 <a target="_blank" href="https://arxiv.org/pdf/2401.10166"><img src="https://img.shields.io/badge/VMamba-arxiv-red?logo=arxiv"></a>
                 <a target="_blank" href="https://github.com/MzeroMiko/VMamba"><img src="https://img.shields.io/badge/VMamba-repo-blue?logo=github"></a>
-                <a target="_blank" href="https://mzeromiko.github.io/VMamba"><img src="https://img.shields.io/badge/VMamba-page-blue?logo=github"></a>
-                <a target="_blank" href="https://huggingface.co/papers/2401.10166"><img src="https://img.shields.io/badge/VMamba-huggingface-yellow?logo=huggingface"></a>
+                <a target="_blank" href="https://mzeromiko.github.io/public/VMamba"><img src="https://img.shields.io/badge/VMamba-page-blue?logo=github"></a>
+                <a target="_blank" href="https://huggingface.co/papers/2401.10166"><img src="https://img.shields.io/badge/VMamba-paper-yellow?logo=huggingface"></a>
                 `,
         },
         // {
