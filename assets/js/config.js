@@ -30,7 +30,7 @@ const CONFIG = {
         {
             "icon": "assets/data/pubs/aks.png",
             "title": "Adaptive Keyframe Sampling for Long Video Understanding",
-            "author": "<b>Xi Tang</b>, , Jihao Qiu&ast;, Lingxi Xie, Yunjie Tian, Jianbin Jiao and Qixiang Ye ",
+            "author": "<b>Xi Tang</b>&ast, Jihao Qiu&ast;, Lingxi Xie, Yunjie Tian, Jianbin Jiao and Qixiang Ye ",
             "pub": "CVPR 2025",
             "link": `
                 <a target="_blank" href="https://arxiv.org/pdf/2502.21271"><img src="https://img.shields.io/badge/AKS-arxiv-red?logo=arxiv"></a>
