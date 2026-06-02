@@ -8,7 +8,7 @@ const CONFIG = {
         'photo_width': '230',
         'photo_height': '260',
     },
-    'bio': 'Day day up.',
+    'bio': 'Minority of the Majority.',
     'aboutme': `I am a Ph.D. candidate of <A href="http://lamp.ucas.ac.cn/index.html">LAMP (Learning And Machine Perception)</A> in the <A href="https://sais.ucas.ac.cn/index.php/zh/">School of Advanced Interdisciplinary Sciences</A>, 
     <A href="http://english.ucas.ac.cn/">University of Chinese Academy of Sciences </A>, 
     advised by <A href="https://people.ucas.edu.cn/~jiaojianbin">Prof. Jianbin Jiao </A>. 
