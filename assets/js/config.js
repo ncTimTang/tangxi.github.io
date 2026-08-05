@@ -18,7 +18,7 @@ const CONFIG = {
         'mail': 'mailto:tangxi19@mails.ucas.ac.cn',
         'huggingface': 'https://huggingface.co/TimTang',
         'github': 'https://github.com/ncTimTang',
-        'google': '',
+        'google': 'https://scholar.google.com/citations?user=K0GU1T0AAAAJ&hl=zh-CN&oi=ao',
         'orcid': 'https://orcid.org/0009-0008-8876-0608',
         'wechat': '',
     },
